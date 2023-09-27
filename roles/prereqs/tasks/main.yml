@@ -1,0 +1,18 @@
+---
+# tasks file for prereq
+- name: Register the RHEL box with subscription manager (no log enabled to prevent output of password).
+  community.general.redhat_subscription:
+    state: present
+    username: "{{ username }}"
+    password: "{{ password }}"
+    auto_attach: true
+  no_log: true
+
+- name: Ensure the latest version of packages are installed. 
+  ansible.builtin.dnf:
+    name: '*'
+    state: latest
+
+- name: Ensure Red Hat insights is registered and enabled.
+  redhatinsights.insights_register:
+    state: present
