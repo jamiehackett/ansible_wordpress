@@ -3,5 +3,5 @@ collections:
   - name: community.general
     source: https://galaxy.ansible.com/ 
 
-  - name: redhatinsights.insights
+  - name: redhatinsights
     source: https://galaxy.ansible.com/ 
