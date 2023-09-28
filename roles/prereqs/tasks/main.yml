@@ -14,5 +14,5 @@
     state: latest
 
 - name: Ensure Red Hat insights is registered and enabled.
-  redhatinsights.insights_register:
+  redhatinsights.insights.insights_register:
     state: present
